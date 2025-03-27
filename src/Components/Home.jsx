@@ -1,11 +1,15 @@
+import { useContext } from "react";
 import WelcomeWidget from "./WelcomeWidget";
+import { AuthContext } from "../Context/AuthContext";
 
+export default function Home() {
 
-export default function Home({email}) {
+    const { logout } = useContext(AuthContext);
     return (
         <>
             <h1>Your at home</h1>
-            <WelcomeWidget email = {email}/>
+            <WelcomeWidget/>
+            <button onClick= { logout }>LogOut</button>
         </>
     );
 

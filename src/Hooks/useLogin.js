@@ -1,4 +1,4 @@
-export  function useLogin() 
+export default function useLogin() 
 {
     const login = (email, password) => {
         // Fake login check
